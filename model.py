@@ -16,17 +16,18 @@ class model:
 
     def inserirIdoso(self, cpf, nome, dataDeNascimento, cidadeDeNascimento, racaCor, moradia, cartaoSus, pai, mae, sabeLerEscrever, escolaridade, rua, cidade, bairro, numero, cep, municipio, estado, complemento, telefone, email, estacaoConjugal, profissao, convenio, deficiencia, tipoSanguineo, fatorRH, nomeResponsavel, vinculoResponsavel, telefoneResponsavel, enderecoResponsavel, moraResponsavel, dataCadastrada):
         try:
-            sql = "select * from cadastro where cpf = '{}';".format(cpf)
-            self.con.execute(sql)    
-            verificarLogin = self.con.fetchall()
-            if len(verificarLogin) > 0 :            
+            
+            #sql = "select * from cadastro where cpf = '{}';".format(cpf)
+            #self.con.execute(sql)    
+            #verificarLogin = self.con.fetchall()
+            #if len(verificarLogin) > 0 :            
                 sql2 = "insert into cadastro(cpf, nome, dataDeNascimento, cidadeDeNascimento, racaCor, moradia, cartaoSus, pai, mae, sabeLerEscrever, escolaridade, rua, cidade, bairro, numero, cep, municipio, estado, complemento, telefone, email, estacaoConjugal, profissao, convenio, deficiencia, tipoSanguineo, fatorRH, nomeResponsavel, vinculoResponsavel, telefoneResponsavel, enderecoResponsavel, moraResponsavel, dataCadastrada) values('{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}','{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}');".format(cpf, nome, dataDeNascimento, cidadeDeNascimento, racaCor, moradia, cartaoSus, pai, mae, sabeLerEscrever, escolaridade, rua, cidade, bairro, numero, cep, municipio, estado, complemento, telefone, email, estacaoConjugal, profissao, convenio, deficiencia, tipoSanguineo, fatorRH, nomeResponsavel, vinculoResponsavel, telefoneResponsavel, enderecoResponsavel, moraResponsavel, dataCadastrada)
                 self.con.execute(sql2)
                 self.db_connection.commit()
                 return "{} Cadastro feito!".format(self.con.rowcount)
 
-            else:
-                return "CPF já cadastrado, faça login ou entre em contato pelo telefone: 2222-2222"
+            #else:
+            #    return "CPF já cadastrado, faça login ou entre em contato pelo telefone: 2222-2222"
 
         except Exception as erro:
             return erro
@@ -61,7 +62,7 @@ class model:
         except Exception as erro:
             return erro
 
-    def atuazliar(self, cpf, campo, novoDado):
+    def atualizar(self, cpf, campo, novoDado):
         try:
             sql = "update cadastro set {} = '{}' where cpf = '{}'". format(campo, novoDado, cpf) 
             self.con.execute(sql)

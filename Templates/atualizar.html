@@ -9,6 +9,11 @@
 
     <body>
         <form action ='/atualizar.html' method="POST">
+            <label>Digite o cpf da pessoa qual você deseja atualizar: </label><br>
+
+           <input type="number" id="tCpf" name="tCpf" placeholder="Informe o Cpf"/><br>
+
+           <br><br>
            <label>Campo: ></label><br>
            <select name ="tCampo">
                 <option value="cpf">CPF</option> 
@@ -49,8 +54,7 @@
 
            
            <label>Novo Dado: </label><br>
-           <input type="text" name="tDado" placeholder="Informe o novo dado"/>
-           <input type="number" id="tCpf" name="tNovaCpf"/><br>
+           <input type="text" name="tDado" id="tDado" placeholder="Informe o novo dado"/>
            <br><br>
 
            <button type="submit">Atualizar</button>

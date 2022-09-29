@@ -13,6 +13,7 @@ this.modelo = model()
 
 app = Flask(__name__)
 
+
 @app.route('/', methods=['GET', 'POST'])
 def cadastrar():
     if request.method == 'POST':
@@ -47,6 +48,7 @@ def cadastrar():
         this.vinculoResponsavel = request.form['tNovaVinculoResponsavel']
         this.telefoneResponsavel = request.form['tNovaTelefoneResponsavel']
         this.enderecoResponsavel = request.form['tNovaEnderecoResponsavel']
+        this.moraResponsavel = request.form['lmoraResponsavel']
         
           
 
@@ -59,7 +61,7 @@ def cadastrar():
 @app.route('/atualizar.html', methods=['GET', 'POST'])
 def atualizarDado():
     if request.method =='POST':
-        this.cpf = request.form['tNovaCpf'] 
+        this.cpf = request.form['tCpf'] 
         this.campo = request.form['tCampo']
         this.dado = request.form['tDado']
         this.msg = this.modelo.atualizar(this.cpf, this.campo, this.dado)
