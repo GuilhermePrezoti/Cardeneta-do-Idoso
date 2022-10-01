@@ -1,0 +1,124 @@
+body{
+  background-image: url(../imagem/reflexao-idoso-blur.png);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  color: rgba(0, 0, 0);
+  font-family: poppinsregular;
+  margin: 0 auto;
+  padding: 15px;
+  font-family: 'Roboto', sans-serif;
+}
+
+
+
+#corpo{
+  background-color: rgba(255, 255, 255, 0.250);
+  border-radius: 20%;
+  padding: 5%;
+  margin: 3%;
+}
+
+
+
+h1{
+  font-size: 60px;
+  font-weight: 200;
+  color: rgba(0, 0, 0, 0.868);
+}
+
+
+
+#grid-container-texto{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 2;
+}
+
+
+
+p #li-texto{
+  font-size: 20px;
+  text-align: justify;
+}
+h2{
+  text-align: justify;
+}
+
+
+
+#item-1{
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 1;
+  grid-row-end: 1;
+}
+
+
+
+#item-2{
+  text-align: justify;
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 1;
+}
+#h2-center{
+  text-align: center;
+}
+#item-3{
+  text-align: center;
+}
+
+
+
+#ul-menu{
+  margin: auto;
+  font-size: 25px;
+}
+
+
+
+header{
+  text-decoration: none;
+  display: inline-block;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+
+
+#li-menu{
+  color: white;
+  display: inline-block;
+  margin: 20px;
+}
+
+
+
+#li-menu:hover{
+  color: black;
+  transition: 0.3s all;
+}
+
+#inscreva-se-btn:hover{
+
+  background-color: rgba(88, 82, 255, 0.664);
+
+  color: white;
+
+}
+
+#inscreva-se-btn{
+
+  border: 2px solid rgb(0, 0, 0);
+
+  padding: 10px;
+
+  border-radius: 15px;
+
+}

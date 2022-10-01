@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+   
+        <title>Cadastrar</title>
+    </head>
+
+    <body>
+        <form action="/cadastrar.html" method="POST">
+            <label> Cpf: </label><br>
+            <input type=number name="tCodigo"/>
+            <br><br>
+            <label> Email: </label><br>
+            <input type=text name="tNome"/>
+            <br><br>
+            <label> Senha: </label><br>
+            <input type=text name="tSenha"/>
+            <br><br>
+
+            <label> Campo: </label><br>
+            <select name="tCampo">
+                <option value="cpf">CPF</option>
+                <option value="dataDeNascimento">Data de Nascimento</option>
+                <option value="cidadeDeNascimento">Endereço</option>
+                <option value="racaCor">Raça/Cor</option>
+                <option value="moradia">Moradia</option>
+                <option value="cartaoSus">Cartão SUS</option>
+                <option value="pai">Pai</option>
+                <option value="mae">Mãe</option>
+                <option value="sabeLerEscrever">Sabe Ler/Escrever</option>
+                <option value="escolaridade">Escolaridade</option>
+                <option value="rua">Rua</option>
+                <option value="cidade">Cidade</option>
+                <option value="bairro">Bairro</option>
+                <option value="numero">Número da Casa/AP</option>
+                <option value="cep">CEP</option>
+                <option value="municipio">Municipio</option>
+                <option value="estado">Estado</option>
+                <option value="complemento">Complemento</option>
+                <option value="telefone">Telefone</option>
+                <option value="email">Email</option>
+                <option value="estacaoConjugal">Estação Conjugal</option>
+                <option value="profissao">Profissão</option>
+                <option value="convenio">Convenio</option>
+                <option value="deficiencia">Deficiência</option>
+                <option value="tipoSanguineo">Tipo Sanguineo</option>
+                <option value="fatorRh">Fator RH</option>
+                <option value="nomeResponsavel">Nome do Responsavel</option>
+                <option value="vinculoResponsavel">Vinculo com o Responsável</option>
+                <option value="telefoneResponsavel">Telefone do Responsável</option>
+                <option value="enderecoResponsavel">Endereço do Responsável</option> 
+                <option value="moraResponsavel">Mora com o Responsável</option> 
+                <option value="dataCadastrada">Data Cadastrada</option>
+
+            </select>
+            <br><br>
+
+            <label> Novo Dado: </label><br>
+            <input type="text" name="tDado" placeholder="2022-02-01"/>
+            <br><br>
+        </form>
+            <button type="submit">Atualizar</button>
+            <h6>{{dados}}</h6>
+        
+    </body>
+</html>
